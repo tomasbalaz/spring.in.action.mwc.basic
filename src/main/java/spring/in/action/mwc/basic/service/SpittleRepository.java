@@ -6,5 +6,11 @@ import spring.in.action.mwc.basic.model.Spittle;
 
 public interface SpittleRepository {
 	
-	List<Spittle> findSpittles(long max, int count);
+	public List<Spittle> findSpittles(long max, int count);
+	
+	public Spittle findOne(long id);
+	
+	public Spittle save(Spittle spittle);
+	
+	public Spittle findByUsername(String userName);
 }
