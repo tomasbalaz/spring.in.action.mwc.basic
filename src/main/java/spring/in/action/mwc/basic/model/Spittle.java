@@ -2,6 +2,9 @@ package spring.in.action.mwc.basic.model;
 
 import java.util.Date;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
@@ -9,6 +12,8 @@ public class Spittle {
 
 	private final Long id;
 
+	@NotNull
+	@Size(min=5, max=16)
 	private final String message;
 
 	private final Date time;
